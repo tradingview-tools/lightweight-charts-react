@@ -1,6 +1,6 @@
-# `@utori-dev/template-simple-typescript-library`
+# `@tradingview-tools/lightweight-charts-react`
 
-Simple and imperfect template for a TypeScript library.
+Tradingview's lightweight-charts for React.
 
 ## Overview
 
@@ -62,7 +62,7 @@ To publish your package on the [NPM registry][npmjs], you can run `npm run relea
 
 It is wise to do a dry run before actually publishing. You can do this with `npm run release -- --dry-run`.
 
-[git_repo]: https://github.com/utori-dev/template-simple-typescript-library
+[git_repo]: https://github.com/tradingview-tools/lightweight-charts-react
 [github_docs_template]: https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template
 [jest]: https://jestjs.io/
 [jest_docs_config]: https://jestjs.io/docs/configuration
