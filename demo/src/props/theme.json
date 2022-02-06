@@ -1,0 +1,46 @@
+{
+  "palette": {
+    "default": {
+      "darkMode": true,
+      "neutral": {
+        "050": "#fafafa",
+        "100": "#f5f5f5",
+        "200": "#e5e5e5",
+        "300": "#d4d4d4",
+        "400": "#a3a3a3",
+        "500": "#737373",
+        "600": "#525252",
+        "700": "#404040",
+        "800": "#262626",
+        "900": "#171717"
+      },
+      "text": {
+        "main": "#FFF",
+        "dark": "#000",
+        "light": "#FFF"
+      },
+      "color": {
+        "primary": {
+          "main": "#0ea5e9",
+          "light": "#bae6fd",
+          "dark": "#0369a1"
+        }
+      }
+    }
+  },
+  "spacing": {
+    "multiple": {
+      "value": 0.25,
+      "unit": "rem"
+    }
+  },
+  "typography": {
+    "base": {
+      "fontSize": "1rem",
+      "fontFamily": "'Roboto', sans-serif"
+    },
+    "app-title": {
+      "fontSize": "1.5rem"
+    }
+  }
+}
