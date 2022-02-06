@@ -5,6 +5,7 @@ import ButtonLink from '../ui/ButtonLink';
 const Home: React.FC = () => {
   return (
     <div>
+      <ButtonLink to="area">Area Series</ButtonLink>
       <ButtonLink to="candlestick">Candlestick Series</ButtonLink>
     </div>
   );

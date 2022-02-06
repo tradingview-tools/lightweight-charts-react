@@ -7,6 +7,7 @@ import Typography from './ui/Typography';
 import ButtonLink from './ui/ButtonLink';
 
 const SeriesHome = React.lazy(() => import('./series/Home'));
+const SeriesArea = React.lazy(() => import('./series/Area'));
 const SeriesCandlestick = React.lazy(() => import('./series/Candlestick'));
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
       <AppRoot>
         <AppHeader>
           <Typography variant="app-title">lightweight-charts Demo</Typography>
-          <ButtonLink to="series/candlestick">Candlestick Series</ButtonLink>
+          <ButtonLink to="series">Series</ButtonLink>
         </AppHeader>
         <AppMain>
           <Routes>
@@ -33,6 +34,14 @@ function App() {
                 element={
                   <Suspense fallback={<div>Loading...</div>}>
                     <SeriesHome />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="area"
+                element={
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <SeriesArea />
                   </Suspense>
                 }
               />
