@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import SeriesRoutes from './series';
 import AppRoot from './ui/AppRoot';
 import AppHeader from './ui/AppHeader';
 import AppMain from './ui/AppMain';
 import Typography from './ui/Typography';
-import ButtonBase from './ui/ButtonBase';
 import ButtonLink from './ui/ButtonLink';
+
+const SeriesHome = React.lazy(() => import('./series/Home'));
+const SeriesCandlestick = React.lazy(() => import('./series/Candlestick'));
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <AppRoot>
         <AppHeader>
           <Typography variant="app-title">lightweight-charts Demo</Typography>
+          <ButtonLink to="series/candlestick">Candlestick Series</ButtonLink>
         </AppHeader>
         <AppMain>
           <Routes>
@@ -22,11 +24,27 @@ function App() {
               element={
                 <>
                   <Typography>Welcome to the demo!</Typography>
-                  <ButtonLink to="series">Series</ButtonLink>
                 </>
               }
             />
-            <Route path="/series" element={<SeriesRoutes />} />
+            <Route path="series">
+              <Route
+                path=""
+                element={
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <SeriesHome />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="candlestick"
+                element={
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <SeriesCandlestick />
+                  </Suspense>
+                }
+              />
+            </Route>
           </Routes>
         </AppMain>
       </AppRoot>
