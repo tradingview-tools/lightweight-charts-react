@@ -8,6 +8,7 @@ import withTheme from './ui/withTheme';
 const Home = React.lazy(() => import('./pages/Home'));
 const ExamplesHome = React.lazy(() => import('./pages/examples/Home'));
 const ExamplesCandlestickChart = React.lazy(() => import('./pages/examples/CandlestickChart'));
+const ExamplesBarChart = React.lazy(() => import('./pages/examples/BarChart'));
 
 function App() {
   return (
@@ -40,6 +41,14 @@ function App() {
               element={
                 <SuspenseLoader>
                   <ExamplesHome />
+                </SuspenseLoader>
+              }
+            />
+            <Route
+              path="bar-chart"
+              element={
+                <SuspenseLoader>
+                  <ExamplesBarChart />
                 </SuspenseLoader>
               }
             />
