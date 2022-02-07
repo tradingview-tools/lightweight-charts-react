@@ -1,6 +1,7 @@
 import React from 'react';
 import { Chart, CrosshairMode, Series } from '@tradingview-tools/lightweight-charts-react';
 import data from './data.json';
+import asPage from '../../../ui/asPage';
 
 const CandlestickChart: React.FC = () => {
   return (
@@ -47,4 +48,4 @@ const CandlestickChart: React.FC = () => {
   );
 };
 
-export default CandlestickChart;
+export default asPage(CandlestickChart, { title: 'Candlestick Chart' });
