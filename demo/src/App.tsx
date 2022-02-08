@@ -9,6 +9,7 @@ const Home = React.lazy(() => import('./pages/Home'));
 const ExamplesHome = React.lazy(() => import('./pages/examples/Home'));
 const ExamplesCandlestickChart = React.lazy(() => import('./pages/examples/CandlestickChart'));
 const ExamplesBarChart = React.lazy(() => import('./pages/examples/BarChart'));
+const ExamplesCustomFontFamily = React.lazy(() => import('./pages/examples/CustomFontFamily'));
 
 function App() {
   return (
@@ -57,6 +58,14 @@ function App() {
               element={
                 <SuspenseLoader>
                   <ExamplesCandlestickChart />
+                </SuspenseLoader>
+              }
+            />
+            <Route
+              path="custom-font-family"
+              element={
+                <SuspenseLoader>
+                  <ExamplesCustomFontFamily />
                 </SuspenseLoader>
               }
             />
