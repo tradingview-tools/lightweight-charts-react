@@ -1,7 +1,7 @@
 import React from 'react';
 import { ListItem, UnorderedList } from 'evergreen-ui';
-import Link from '../../../ui/Link';
-import asPage from '../../../ui/asPage';
+import Link from '../../ui/Link';
+import asPage from '../../ui/asPage';
 
 const Home: React.FC = () => {
   return (

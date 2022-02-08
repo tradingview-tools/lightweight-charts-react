@@ -1,7 +1,7 @@
 import React from 'react';
 import { Chart, CrosshairMode, Series } from '@tradingview-tools/lightweight-charts-react';
-import data from './data.json';
-import asPage from '../../../ui/asPage';
+import data from '../../data/bar-data.json';
+import asPage from '../../ui/asPage';
 
 const BarChart: React.FC = () => {
   return (
